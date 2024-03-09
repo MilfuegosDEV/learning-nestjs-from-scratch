@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { MessagesModule } from './messages/messages.module';
+import { UserModule } from './modules/users/user.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    MessagesModule,
+    UserModule,
   ],
 })
 export class AppModule {}
